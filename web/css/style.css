@@ -1,0 +1,80 @@
+header{
+	height: 100px;		
+	box-shadow: 0 0 30px 5px #141414;
+	padding: 20px;	
+}
+
+h1,h2{
+	font-weight: bold;
+}
+
+h2{
+	font-size:150%;
+}
+
+.container{
+	margin:30px;
+}
+
+.form{
+	margin-top: 5%;
+
+}
+
+.form-group{
+	margin: 20px 10px 20px 0;	
+}
+
+li{
+	margin: 2px;	
+	text-align: center;	
+	font-size: 18px;	
+	background-color: rgb(220,220,220);
+	border-radius: 3px;	
+	width: 120px;		
+}
+
+.li-content{
+	display: none;	
+}
+
+.wrapper,.control,ul,.g1,.g4,.g6,.r1,.r3{
+	display: flex;
+}
+
+ul{
+	width: 300px;
+}
+
+.g4,.g6,.r1{
+	flex-wrap: wrap;
+}
+
+.wrapper,.g1,.r3,.r1{
+	flex-direction: column;
+}
+
+@media (min-width: 768px){
+	.li-content {
+		display: inherit;		
+	}
+	h2{
+		display: none;
+	}
+
+	.g1 .form-group{
+		width: 320px;
+	}	
+
+	#hotel-form .form .form-group #to1{
+		width: 480px;
+	}	
+
+	.g2{
+		width:640px;
+	}
+
+	.g1{
+		flex-direction: row;
+	}
+}

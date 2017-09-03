@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">	
+	<link rel="stylesheet" type="text/css" href="./css/style.css">	
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 	<title>TravelMate</title>
+	
+</head>
+<body>
+	<div class="wrapper">
+		<header>				
+			<h1><i class="fa fa-plane"></i>TravelMate</h1>
+		</header>
+
+		<div class="container">		
+			<ul class="nav nav-pills" class="services">
+			    <li class="active">
+			    	<a data-toggle="tab" href="#flight-form">
+			    		<div class="fa fa-plane"></div>		    		
+			    		<div class ="li-content">Flight</div>
+			    	</a>
+			    </li>
+			    <li>
+			    	<a data-toggle="tab" href="#hotel-form">
+			    		<div class="fa fa-bed"></div>
+			    		<div class ="li-content">Hotel</div>
+			    	</a>
+			    </li>
+		  	</ul>		  		  		
+	  	  	<div class="tab-content">
+	  	  		<div id="flight-form" class="tab-pane fade in active">
+	  	  			<h2>Search Flight</h2>
+
+	  	  			<form class="form" method="get">  
+		  	  			<ul class="nav nav-pills">
+				 		   <li id="return-li" class="active"><a data-toggle="tab" href="#flight">Return</a></li>
+				 		   <li id="one-way-li"><a data-toggle="tab" href="#flight">One Way</a></li>		    
+			  			</ul>	
+
+			  			<div class="control g1">
+			  				<div class="form-group">		  				
+		  						<label for="from">Flying from</label>
+		  						<input class="form-control" type="text" id="from" placeholder="City or Airport" name="from"/>   
+				  			</div>
+				  			<div class="form-group">		
+			  					<label  for="to">Flying To</label>
+				      			<input class="form-control" type="text" id="to" placeholder="City or Airport" name="to">	
+				      		</div>	
+			  			</div>
+			  				 
+		  				<div class="g2">	
+		  					<div class="control g3">   					
+			  					<div class="form-group">
+		  							<label for="depart">Departing</label>		  							
+		  							<input class="form-control" type="date" id="doj" name="depart"/>  				
+			  					</div>		     		  
+			  					<div class="form-group return-controls">
+				     				 <label for="return">Returning</label>
+				     				 <input class="form-control" type="date" id="dor" name="return"/>		     	
+			    				</div>	
+			    			</div>	
+			    			<div class="g4"> 
+			    				<div class="control g5"> 
+					    				<div class="form-group">
+								     		  <label for="adults">Adults(18+)</label>
+								      		  <select class="form-control adult1"></select>
+							    		</div>	
+							    		<div class="form-group">
+								     		  <label for="children">Children(0-17)</label>
+								      		  <select class="form-control children1"></select>
+							    		</div>
+							    </div>
+							    <div class="control g6">
+							    </div> 		
+					    	</div>		    					    				
+		    			</div>	
+		    			
+				    	<div class="control g7">							    	
+			    			<button id="flight-search" type="submit" class="btn btn-default">Search</button>
+			    		</div>
+			    	</form>	
+	  	  		</div>
+	  	  		
+	  	  		<div id="hotel-form" class="tab-pane fade">
+	  	  			<h2>Search Hotel</h2>
+
+	  	  			<form class="form" method="get"> 
+	  	  				<div class="form-group">
+				     		  <label for="to">Going to</label>
+				      		  <input class="form-control" type="text" id="to1" placeholder="Destination, Hotel name, Airport, Train Station" name="to">				    		
+				    	</div>			
+						
+						<div class="r1">
+							<div class="control r2">
+				    			<div class="form-group">
+						     		  <label for="checkin">Check in</label>	
+									  <input class="form-control" type="date" id="checkin" name="checkin"/>
+						    	</div>
+								<div class="form-group">
+						     		  <label for="checkout">Check out</label>	
+						     		  <input class="form-control" type="date" id="checkout" name="checkout"/>
+					    		</div>	
+					    		<div class="form-group">
+						     		  <label for="room">Rooms</label>
+						      		  <select class="form-control room" ></select>
+						    	</div>				    	
+					    	</div>	
+					    	<div class="r3"></div>					    		
+				    	</div>
+				    	
+				    	<div class="control r6">		    		
+			    			<button id="hotel-search" type="submit" class="btn btn-default">Search</button>
+			    		</div>	   	   	  				  
+	 	 			</form>	
+
+	  	  		</div> 	 		
+	  	  	</div>			   				  			  	
+		</div>
+
+	</div>
+	
+	
+	<script type="text/javascript" src="./js/handler.js"></script>
+	<script type="text/javascript" src="./js/form-data.js"></script>
+	<script type="text/javascript" src="./js/data-provider.js"></script>
+	<script type="text/javascript" src="./js/control-factory.js"></script>
+</body>
+</html>
